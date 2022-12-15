@@ -8,8 +8,26 @@ struct CountsByUsage {
 };
 
 struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
+  int lowCount;
+  int mediumCount;
+  int highCount;
   struct CountsByUsage counts = {0, 0, 0};
-  return counts;
+  while(nBatteries<1)
+  {
+  if(cycles<310)
+    lowCount++;
+  else if(cycles>310 && cycles<929)
+    mediumCount++;
+  else
+    highCount++;
+    
+  return lowCount;
+  return mediumCount;
+  return highCount;
+  
+  }
+  nBatteries=nBatteries-1;
+  
 }
 
 void testBucketingByNumberOfCycles() {
