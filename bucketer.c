@@ -20,6 +20,7 @@ struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
     mediumCount++;
   else
     highCount++;
+    
   return lowCount;
   return mediumCount;
   return highCount;
