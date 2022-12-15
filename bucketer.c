@@ -8,6 +8,9 @@ struct CountsByUsage {
 };
 
 struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
+  int lowCount;
+  int mediumCount;
+  int highCount;
   struct CountsByUsage counts = {0, 0, 0};
   while(nBatteries<1)
   {
